@@ -61,7 +61,7 @@ function ParallaxText({ children, baseVelocity = 5 }: ParallaxProps) {
    * dynamically generated number of children.
    */
 return (
-        <div style={{fontFamily: blackExtraExpanded}}
+        <div style={{ fontFamily:'blackExtraExpanded'}}
           className="parallax bg-black border border-white">
             <motion.div className="font-semibold uppercase text-5xl flex whitespace-nowrap flex-no-wrap " style={{ x }}>
                 <span className="block mr-8">{children} </span>
