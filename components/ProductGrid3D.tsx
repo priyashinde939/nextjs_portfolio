@@ -27,10 +27,10 @@ const products: Product[] = [
 const ProductGrid3D = () => {
   return (
       <div className="py-32">
-      <h1 style={{ fontFamily:'blackExtraExpanded'}}
+      <h1 style={{ fontFamily:'blackExpanded'}}
         className="heading">
-        A small selection of{" "}
-        <span className="text-purple-300">recent projects</span>
+        A Small Selection of{" "}
+        <span className="text-purple-300">Recent Projects</span>
       </h1>
     
     <div 

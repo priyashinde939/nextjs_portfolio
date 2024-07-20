@@ -9,15 +9,15 @@ export const LabIntro = () => {
     <Scrollytelling.Root
       start="top bottom"
       end="bottom top"
-      scrub={1.1}
-      debug={{ label: "Lab Intro" }}
+      scrub={1}
+
     >
       <div className={s.container}>
         <Scrollytelling.Parallax
           tween={{
             start: 0,
             end: 100,
-            movementY: { value: -20, unit: "px" },
+            movementY: { value: -30, unit: "px" },
           }}
         >
           <div className={s.pretitle}>

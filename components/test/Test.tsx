@@ -1,22 +1,35 @@
-import React from 'react'
-import { motion, useTransform, useScroll, AnimatePresence } from "framer-motion";
+import clsx from "clsx";
+import "../../css/helpers.scss";
+import * as Scrollytelling from "@/lib/scrollytelling-client";
+import { motion } from 'framer-motion';
 
-
-const Test = () => {
+export const Test = () => {
     return (
-        <div>
-            <motion.div
-                        className="rounded-full bg-white absolute"
-                        initial={{ opacity: 0, scale: 0.5 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{
-                            duration: 0.8,
-                            delay: 0.5,
-                            ease: [0, 0.71, 0.2, 1.01]
-                        }}
-                        />
-        </div>
-    )
-}
+        <Scrollytelling.Root
+        start="top bottom"
+        end="bottom top"
+        scrub={1}
+        >
+        <div className="flex flex-grid items-center justify-center bg-slate-900 h-60vh"> 
+            <Scrollytelling.Parallax
+            tween={{
+                start: 0,
+                end: 100,
+                movementY: {value:90, unit:"px"}
+            }}
+            >
+                <div className=" h-20 w-20 relative rounded-full bg-blue-500">
+                    <h1 style={{fontFamily:'blackExpanded', color:'red'}}
+                    >Hello</h1>
+                </div>
 
-export default Test
+            </Scrollytelling.Parallax>
+            <div>
+                <h1 style={{fontFamily:'black'}}
+                >Pinned text</h1>
+            </div>
+        </div>
+        </Scrollytelling.Root>
+    );
+};
+

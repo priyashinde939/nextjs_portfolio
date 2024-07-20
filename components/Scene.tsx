@@ -16,7 +16,7 @@ export default function Scene() {
     <Canvas style={{ height: '100vh', width: 'full' }}
     camera={{ position: [-0.5, 0.5, 3], fov: 60, far:10, near:1, aspect:2 }}
 
-    gl={{antialias:true}} dpr={[5, 6.5]} className="relative">
+    gl={{antialias:true}} dpr={[3, 4.5]} className="relative mb-5">
 
         <directionalLight position={[-5, -5, 8]}  intensity={4}/>
         <ambientLight intensity={2} color='blue' />
