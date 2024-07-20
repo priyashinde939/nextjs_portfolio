@@ -1,7 +1,5 @@
-import clsx from "clsx";
 import "../../css/helpers.scss";
 import * as Scrollytelling from "@/lib/scrollytelling-client";
-import { motion } from 'framer-motion';
 
 export const Test = () => {
     return (
@@ -15,7 +13,7 @@ export const Test = () => {
             tween={{
                 start: 0,
                 end: 100,
-                movementY: {value:90, unit:"px"}
+                movementY: {value:60, unit:"px"}
             }}
             >
                 <div className=" h-20 w-20 relative rounded-full bg-blue-500">
