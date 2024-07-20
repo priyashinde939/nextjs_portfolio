@@ -6,7 +6,7 @@ import { useRef } from "react";
 
 export const Example = () => {
     return (
-        <div className=" bg-purple-900 mt-20">
+        <div className=" bg-gray-700 mt-20">
             <div className="flex h-48 items-center justify-center">
                 <span className="font-semibold uppercase text-neutral-500">
                 Scroll down
@@ -30,7 +30,7 @@ export const Example = () => {
     });
 
     const x = useTransform(scrollYProgress, [0, 1], ["1%", "-95%"]);
- 
+
     return (
         <section ref={targetRef} className="relative h-[300vh] bg-black">
             <div className="sticky top-0 flex h-screen items-center overflow-hidden">

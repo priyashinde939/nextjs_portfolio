@@ -33,11 +33,13 @@ const ProductGrid3D = () => {
         <span className="text-purple-300">recent projects</span>
       </h1>
     
-    <div className="flex flex-wrap gap-16 bg-black-100 items-center justify-center mt-10 mb-10 pb-32 ">
+    <div 
+    className="flex flex-wrap gap-16 bg-black-100 items-center justify-center mt-10 mb-10 pb-32 ">
       {products.map((product) => (
         <CardContainer key={product.id} className="inter-var cursor-pointer">
-          <CardBody className="relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] bg-slate-600 bg-opacity-0.2 dark:border-white/[0.2] border-black/[0.1] w-10px h-15 rounded-xl p-5 border">
-            <CardItem
+          <CardBody 
+          className="relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] bg-slate-600 bg-opacity-0.2 dark:border-white/[0.2] border-black/[0.1] w-10px h-15 rounded-xl p-5 border">
+            <CardItem 
               translateZ="50"
               className="text-lg font-bold text-white-300"
             >
