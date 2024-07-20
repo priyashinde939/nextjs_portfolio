@@ -13,6 +13,7 @@ import { ModelViewer } from '../components/ModelViewer';
 import {Base} from '@/components/test/Base';
 import {Example} from '@/components/test/HorizontalScrollCarousel';
 import { LabIntro } from '@/components/lab-cylinder/LabIntro';
+import { HorizontalMarquee } from "@/components/horizontal-marquee/HorizontalMarquee";
 
 
 
@@ -22,7 +23,7 @@ const Home = () => {
     <main className="relative bg-black-100 flex justify-center items-center overflow-clip flex-col mx-auto ">
       <div className="w-full">
         <Scene />
-        <LabIntro />
+        <HorizontalMarquee />
         <Example />
         <Base />
         <Grid />
