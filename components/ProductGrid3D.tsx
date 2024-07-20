@@ -38,7 +38,7 @@ const ProductGrid3D = () => {
       {products.map((product) => (
         <CardContainer key={product.id} className="inter-var cursor-pointer">
           <CardBody 
-          className="relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] bg-slate-600 bg-opacity-0.2 dark:border-white/[0.2] border-black/[0.1] w-10px h-15 rounded-xl p-5 border">
+          className="relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] bg- bg-gray-900 bg-opacity-0.2 border-black/[0.1] w-10px h-15 rounded-xl p-5 border">
             <CardItem 
               translateZ="50"
               className="text-lg font-bold text-white-300"

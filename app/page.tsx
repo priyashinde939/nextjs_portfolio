@@ -3,7 +3,6 @@
 import ProductGrid3D from "@/components/ProductGrid3D";
 import Footer from "@/components/Footer";
 import { TextParallaxContentExample } from "@/components/TextParallaxContentExample";
-import {HoverImageLinks} from "@/components/HoverImageLinks";
 import Grid from "@/components/Grid";
 import dynamic from 'next/dynamic';
 const Scene = dynamic(()=> import('@/components/Scene'), {ssr:false})
@@ -25,7 +24,6 @@ const Home = () => {
         <Test />
         <ProductGrid3D />
         <TextParallaxContentExample />
-        <HoverImageLinks />
         <Footer />
       </div>
     </main>

@@ -1,5 +1,4 @@
 import { useAnimations ,useGLTF, useScroll } from '@react-three/drei/';
-import { useAnimation } from 'framer-motion';
 import { useEffect ,useRef } from 'react';
 import { Group } from 'three';
 import { useFrame } from '@react-three/fiber';
