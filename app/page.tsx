@@ -9,7 +9,7 @@ const Scene = dynamic(()=> import('@/components/Scene'), {ssr:false})
 import {Example} from '@/components/test/HorizontalScrollCarousel';
 import { LabIntro } from '@/components/lab-cylinder/LabIntro';
 import { Test } from "@/components/test/Test";
-import { Hero } from "@/components/test/Hero";
+
 
 
 
@@ -19,7 +19,6 @@ const Home = () => {
     <main className="relative bg-black-100 flex justify-center items-center overflow-clip flex-col mx-auto ">
       <div className="w-full">
         <Scene />
-        <Hero />
         <LabIntro />
         <Example />
         <Grid />
