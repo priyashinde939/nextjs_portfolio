@@ -72,7 +72,7 @@ export const LabIntro = () => {
         >
           <h2 
           style={{ fontFamily:'blackExtraExpanded'}}
-          className={s.title}>A peek into the latest in tech</h2>
+          className={s.title}>Turning Ideas into Stunning Realities</h2>
         </Scrollytelling.Parallax>
         <p style={{fontFamily:'regular'}}
         className={s.subtitle}>
