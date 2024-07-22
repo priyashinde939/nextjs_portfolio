@@ -13,7 +13,7 @@ return <Html center> {progress.toFixed(1)} % loaded</Html>
 export default function Scene() {
   return (
     <section>
-      <div className="relative z -1 left-36 top-4">
+      <div className="relative z -1 left-36 top-4 ">
         <Canvas style={{ height: '100vh', width: '100%' }}
           camera={{ position: [-0.5, 0.5, 3], fov: 60, far:10, near:1, aspect:2 }}
           gl={{antialias:true}} dpr={[2, 4]} className="relative mb-5">

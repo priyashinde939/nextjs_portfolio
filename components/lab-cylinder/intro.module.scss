@@ -5,9 +5,10 @@
   z-index: 1;
   padding: tovw(32px) 0;
   overflow: hidden;
-
+  margin-bottom: 100px;
   @media screen and (max-width: 800px) {
     padding: tovw(32px, "mobile") 0;
+    
   }
 }
 
@@ -145,6 +146,7 @@
   line-height: 1;
   position: relative;
   background: black;
+ 
 
   @media screen and (max-width: 800px) {
     font-size: tovw(18px, "mobile");
@@ -159,7 +161,7 @@
   display: flex;
   align-items: center;
   position: absolute;
-
+   padding:100px;
   &.reverse {
     right: 0;
   }
