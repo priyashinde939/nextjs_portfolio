@@ -2,17 +2,17 @@ import React from 'react'
 
 const HeroText = () => {
 return (
-    <div className="h-screen w-full absolute -z-8 top-0 ">
+    <div className="h-screen w-full absolute -z-8  m-4 top-0 ">
             <h2 
-            style={{ fontFamily:'blackExtraExpanded'}}
-            className="relative font-black w-full text-8xl text-green-400 p-4" >A peek into the latest in tech
+            style={{ fontFamily:'blackExpanded'}}
+            className="relative font-black w-40% text-6xl text-green-400 m-7" >
+            Hey there....!  Im Priya <br/>
+            A Passionate Web Developer <br/> and Designer
             </h2>
-            <div className="relative w-[40%] p-4">
+            <div className="relative w-[40%] p-4 text-1xl">
                 <p style={{fontFamily:'regular'}}
                 className="relative"> 
-                BSMNT LAB is carving out a vanguard position by combining intensive
-                technology with formal design expertise – we are making the internet
-                everything it can be.
+                combining the aesthetics with the technical precision of development to deliver exceptional web experiences with tools like Framer Motion, TypeScript, and Tailwind CSS to create interactive and dynamic websites.
                 </p>
             </div>
     </div>
