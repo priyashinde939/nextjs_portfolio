@@ -7,7 +7,7 @@ import { useRef } from "react";
 export const Example = () => {
     return (
         <div className=" bg-gray-700 mt-20">
-            <div className="flex h-48 items-center justify-center">
+            <div className="flex h-80 items-center justify-center">
                 <span className="font-semibold uppercase text-neutral-500">
                 Scroll down
                 </span>

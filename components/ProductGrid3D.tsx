@@ -8,6 +8,7 @@ import MagicButton from "./MagicButton";
 
 
 
+
 interface Product {
   id: number;
   name: string;
@@ -32,7 +33,6 @@ const ProductGrid3D = () => {
         A Small Selection of{" "}
         <span className="text-purple-300">Recent Projects</span>
       </h1>
-    
     <div 
     className="flex flex-wrap gap-16 bg-black-100 items-center justify-center mt-10 mb-10 pb-32 ">
       {products.map((product) => (
