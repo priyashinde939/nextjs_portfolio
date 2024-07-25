@@ -28,6 +28,9 @@ const config = {
       },
     },
     extend: {
+      backgroundImage: {
+        'bgImg': "url('../public/herobg.webp')" 
+      },
       colors: {
         black: {
           DEFAULT: "#000",
@@ -166,6 +169,7 @@ const config = {
             transform: "translate(calc(-50% - 0.5rem))",
           },
         },
+        
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -221,6 +225,7 @@ function addVariablesForColors({ addBase, theme }: any) {
     ":root": newVars,
   });
 }
+
 
 
 export default config;

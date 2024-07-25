@@ -1,5 +1,5 @@
-import React from "react";
-import { motion, Variants } from "framer-motion";
+import React, { useRef } from "react";
+import { motion, Variants, useInView } from "framer-motion";
 
 interface AnimatedTextWordProps {
   text: string;
@@ -7,10 +7,12 @@ interface AnimatedTextWordProps {
 
 const AnimatedTextWord: React.FC<AnimatedTextWordProps> = ({ text }) => {
   const words = text.split(" ");
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
 
   const container: Variants = {
     hidden: { opacity: 0 },
-    visible: (i = 1) => ({
+    visible: (i: number = 1) => ({
       opacity: 1,
       transition: { staggerChildren: 0.12, delayChildren: 0.04 * i },
     }),
@@ -37,17 +39,21 @@ const AnimatedTextWord: React.FC<AnimatedTextWordProps> = ({ text }) => {
     },
   };
 
+  const containerStyle = { display: "flex", fontSize: "2rem" };
+  const wordStyle = { marginRight: "9px" };
+
   return (
     <motion.div
-      style={{ overflow: "hidden", display: "flex", fontSize: "2rem" }}
+      ref={ref}
+      style={containerStyle}
       variants={container}
       initial="hidden"
-      animate="visible"
+      animate={isInView ? "visible" : "hidden"}
     >
       {words.map((word, index) => (
         <motion.span
           variants={child}
-          style={{ marginRight: "5px" }}
+          style={wordStyle}
           key={index}
         >
           {word}

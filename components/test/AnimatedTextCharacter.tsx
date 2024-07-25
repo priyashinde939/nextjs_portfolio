@@ -19,8 +19,8 @@ const AnimatedTextCharacter: React.FC<AnimatedTextCharacterProps> = ({ text }) =
   const child: Variants = {
     visible: {
       opacity: 1,
-      x: 0,
-      y: 0,
+      x: 40,
+      y: 50,
       transition: {
         type: "spring",
         damping: 12,
@@ -30,7 +30,7 @@ const AnimatedTextCharacter: React.FC<AnimatedTextCharacterProps> = ({ text }) =
     hidden: {
       opacity: 0,
       x: -20,
-      y: 10,
+      y: -40,
       transition: {
         type: "spring",
         damping: 12,

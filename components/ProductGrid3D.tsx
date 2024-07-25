@@ -5,8 +5,7 @@ import { CardBody, CardContainer, CardItem } from "./ui/3d-card";
 import { FaLocationArrow } from "react-icons/fa6";
 
 import MagicButton from "./MagicButton";
-
-
+import AnimatedTextCharacter from "./test/AnimatedTextCharacter";
 
 
 interface Product {
@@ -28,6 +27,12 @@ const products: Product[] = [
 const ProductGrid3D = () => {
   return (
       <div className="py-32">
+        <h1 style={{fontFamily:'black'}}
+        className="text-5xl">
+ <AnimatedTextCharacter text=" A Small Selection of Recent Projects" />
+        </h1>
+    
+
       <h1 style={{ fontFamily:'blackExpanded'}}
         className="heading">
         A Small Selection of{" "}
