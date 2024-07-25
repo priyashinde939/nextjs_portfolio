@@ -31,6 +31,12 @@ const config = {
       backgroundImage: {
         'bgImg': "url('../public/herobg.webp')" 
       },
+      fontFamily:{
+        'regular': "url('../fonts/BasementGrotesque-Regular.woff2')",
+        'black': "url('../fonts/BasementGrotesque-Black.woff2')",
+        'blackExpanded': "url('../fonts/BasementGrotesque-BlackExpanded.woff2')",
+        'blackExtraExpanded': "url('../fonts/BasementGrotesqueDisplay-UltraBlackExtraExpanded.woff2')",
+      },
       colors: {
         black: {
           DEFAULT: "#000",

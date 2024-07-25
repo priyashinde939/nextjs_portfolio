@@ -41,7 +41,6 @@ const AnimatedTextCharacter: React.FC<AnimatedTextCharacterProps> = ({ text }) =
 
   return (
     <motion.div
-      style={{fontFamily:'regular'}}
       variants={container}
       initial="hidden"
       animate="visible"

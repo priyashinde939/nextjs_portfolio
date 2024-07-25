@@ -15,13 +15,16 @@ const Hero = () => {
 					<div className="w-2 sm:h-80 h-40 bg-gradient-to-b from-[#8a9fff] to-transparent" />
 				</div>
 				<div>
-					<h1 className="font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px] text-white">
-						Hey, I&apos;m <span className="text-[#8a9fff] ">Priya</span>
-					</h1>
-					<p className="text-[#dfd9ff] font-medium lg:text-[30px] sm:text-[26px] xs:text-[20px] text-[16px] lg:leading-[40px]">
-						A Creative Front-end Web Developer&nbsp;
-						<br className="sm:block hidden" />& UI/UX Designer
-					</p>
+					<div className="font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px] text-white ">
+						<AnimatedTextCharacter text="Hey, I&apos;m"/>
+						<span className="text-[#8a9fff] "><AnimatedTextCharacter text="Priya"/></span>
+						
+					</div>
+					<div className="text-[#dfd9ff] font-medium lg:text-[30px] sm:text-[26px] xs:text-[20px] text-[16px] lg:leading-[40px] ">
+						<AnimatedTextCharacter text="A Creative Front-end Web Developer&nbsp;"/>
+						
+						<AnimatedTextCharacter text="& UI/UX Designer"/>
+					</div>
 				</div>
 			</div>
             <Scene />

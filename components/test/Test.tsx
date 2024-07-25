@@ -9,7 +9,7 @@ export const Test = () => {
         end="bottom top"
         scrub={1}
         >
-        <div className="flex flex-grid items-center justify-center bg-slate-900 h-60vh"> 
+        <div className="flex flex-grid items-center justify-center bg-slate-900  bg-grid h-60vh"> 
             <Scrollytelling.Parallax
             tween={{
                 start: 0,

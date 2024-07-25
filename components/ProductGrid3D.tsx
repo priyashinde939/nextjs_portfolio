@@ -72,7 +72,7 @@ const ProductGrid3D = () => {
               translateZ="60"
               className="text-white text-sm mt-2"
             >
-              <p className="text-white-300">
+              <p className="text-white-300 ">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
               sed do eiusmod tempor incididunt </p>
             </CardItem>

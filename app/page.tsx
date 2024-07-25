@@ -7,8 +7,7 @@ import {Example} from '@/components/test/HorizontalScrollCarousel';
 import { LabIntro } from '@/components/lab-cylinder/LabIntro';
 import { Test } from "@/components/test/Test";
 import Hero from "@/components/Hero";
-import { Preloader }  from "@/components/Preloader";
-import { Suspense } from "react";
+
 
 
 
@@ -22,7 +21,6 @@ const Home = () => {
         <div className="w-full">
               <Hero />
               <LabIntro />
-              <Example />
               <Grid />
               <Test />
               <ProductGrid3D />
