@@ -2,15 +2,11 @@
 import { Canvas, useThree } from '@react-three/fiber';
 import { Suspense } from 'react';
 import Model from './Model';
-import {useProgress, Html, ScrollControls} from '@react-three/drei/';
+import { ScrollControls} from '@react-three/drei/';
 import CanvasLoader from './ui/CanvasLoader';
 
 
 
-function Loader() {
-const { progress } = useProgress()
-return <Html center> {progress.toFixed(1)} % loaded</Html>
-}
 
 export default function Scene() {
   return (
