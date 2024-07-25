@@ -2,7 +2,6 @@
 
 import ProductGrid3D from "@/components/ProductGrid3D";
 import Footer from "@/components/Footer";
-import { TextParallaxContentExample } from "@/components/TextParallaxContentExample";
 import Grid from "@/components/Grid";
 import {Example} from '@/components/test/HorizontalScrollCarousel';
 import { LabIntro } from '@/components/lab-cylinder/LabIntro';
@@ -21,13 +20,12 @@ const Home = () => {
     <main className="relative bg-black-400 flex justify-center items-center overflow-clip flex-col mx-auto ">
       
         <div className="w-full">
-              <Hero /> 
+              <Hero />
               <LabIntro />
               <Example />
               <Grid />
               <Test />
               <ProductGrid3D />
-              <TextParallaxContentExample />
               <Footer />
         </div>
     

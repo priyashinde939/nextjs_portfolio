@@ -82,9 +82,11 @@
   font-size: tovw(32px);
   letter-spacing: -0.005em;
   margin-top: tovw(64px);
-  max-width: tovw(750px);
+  max-width: tovw(900px);
   margin-left: tovw(972px);
   position: relative;
+  padding-top: 50px;
+  padding-bottom: 50px;
 
   @media screen and (max-width: 800px) {
     font-size: tovw(11.5px, "mobile");

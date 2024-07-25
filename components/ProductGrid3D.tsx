@@ -3,9 +3,7 @@ import Image from "next/image";
 import React from "react";
 import { CardBody, CardContainer, CardItem } from "./ui/3d-card";
 import { FaLocationArrow } from "react-icons/fa6";
-
 import MagicButton from "./MagicButton";
-import AnimatedTextCharacter from "./test/AnimatedTextCharacter";
 
 
 interface Product {
@@ -29,7 +27,6 @@ const ProductGrid3D = () => {
       <div className="py-32">
         <h1 style={{fontFamily:'black'}}
         className="text-5xl">
- <AnimatedTextCharacter text=" A Small Selection of Recent Projects" />
         </h1>
     
 
@@ -39,11 +36,11 @@ const ProductGrid3D = () => {
         <span className="text-purple-300">Recent Projects</span>
       </h1>
     <div 
-    className="flex flex-wrap gap-16 bg-black-100 items-center justify-center mt-10 mb-10 pb-32 ">
+    className="flex flex-wrap gap-16 bg-black-100 items-center justify-center w-full mt-10 mb-10 pb-40 ">
       {products.map((product) => (
-        <CardContainer key={product.id} className="inter-var cursor-pointer">
+        <CardContainer key={product.id} className="inter-var cursor-pointer ">
           <CardBody 
-          className="relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] bg- bg-gray-900 bg-opacity-0.2 border-black/[0.1] w-10px h-15 rounded-xl p-5 border">
+          className="relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] bg- bg-gray-900 bg-opacity-0.2 border-black/[0.1] w-50px h-15 rounded-xl p-5 border">
             <CardItem 
               translateZ="50"
               className="text-lg font-bold text-white-300"

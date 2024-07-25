@@ -19,22 +19,7 @@ export const LabIntro = () => {
             movementY: { value: -30, unit: "px" },
           }}
         >
-          <div className={s.pretitle}>
-            <svg
-              width="5"
-              height="9"
-              viewBox="0 0 5 9"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <title>chevron right</title>
-              <path
-                d="M5 4.5L-5.28505e-07 8.5L-1.78814e-07 0.5L5 4.5Z"
-                fill="#EFEFEF"
-              />
-            </svg>
-            <span>the lab</span>
-          </div>
+        
         </Scrollytelling.Parallax>
 
         <Scrollytelling.Parallax
@@ -71,7 +56,7 @@ export const LabIntro = () => {
         >
           <h2 
           style={{ fontFamily:'blackExtraExpanded'}}
-          className={s.title}>A peek into the latest in tech</h2>
+          className={s.title}>A peek into My Skillset</h2>
         </Scrollytelling.Parallax>
         <p style={{fontFamily:'regular'}}
         className={s.subtitle}>
@@ -88,9 +73,11 @@ export const LabIntro = () => {
               fill="#EFEFEF"
             />
           </svg>
-          BSMNT LAB is carving out a vanguard position by combining intensive
-          technology with formal design expertise – we are making the internet
-          everything it can be.
+          Front-End Development: HTML, CSS, JavaScript, React, Vue.js
+          Back-End Development: Node.js, Express, Django
+          Database Management: MongoDB, MySQL, PostgreSQL
+          Version Control: Git, GitHub
+          Other Tools: Docker, AWS, Tailwind CSS, TypeScript
         </p>
 
         <div className={s.marquees}>
@@ -144,7 +131,7 @@ const Marquee = ({
       >
         {Array.from({ length: 10 }, (_, i) => (
           <div style={{fontFamily:'blackExtraExpanded'}} key={i} className={s.marqueeItem}>
-            the lab <LabSvg />
+            Skills <LabSvg />
           </div>
         ))}
       </div>
