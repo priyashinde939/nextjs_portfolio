@@ -47,7 +47,8 @@ const config = {
           400: "#fbf6ff",
         },
         blue: {
-          "100": "#E4ECFF",
+          100: "#E4ECFF",
+          200: "#407bdb",
         },
         orange: {
           100: "#eb7335",
