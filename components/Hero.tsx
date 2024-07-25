@@ -15,11 +15,11 @@ const Hero = () => {
 					<div className="w-2 sm:h-80 h-40 bg-gradient-to-b from-[#8a9fff] to-transparent" />
 				</div>
 				<div>
-					<div className="font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px] text-white ">
+					<h1 className="font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px] text-white ">
 						<AnimatedTextCharacter text="Hey, I&apos;m"/>
 						<span className="text-[#8a9fff] "><AnimatedTextCharacter text="Priya"/></span>
 						
-					</div>
+					</h1>
 					<div className="text-[#dfd9ff] font-medium lg:text-[30px] sm:text-[26px] xs:text-[20px] text-[16px] lg:leading-[40px] ">
 						<AnimatedTextCharacter text="A Creative Front-end Web Developer&nbsp;"/>
 						
