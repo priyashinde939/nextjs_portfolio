@@ -19,8 +19,9 @@ const AnimatedTextCharacter: React.FC<AnimatedTextCharacterProps> = ({ text }) =
   const child: Variants = {
     visible: {
       opacity: 1,
-      x: 40,
-      y: 50,
+      y: 0,
+      
+
       transition: {
         type: "spring",
         damping: 12,
@@ -29,8 +30,9 @@ const AnimatedTextCharacter: React.FC<AnimatedTextCharacterProps> = ({ text }) =
     },
     hidden: {
       opacity: 0,
-      x: -20,
-      y: -40,
+      y: -20,
+
+
       transition: {
         type: "spring",
         damping: 12,
@@ -46,7 +48,9 @@ const AnimatedTextCharacter: React.FC<AnimatedTextCharacterProps> = ({ text }) =
       animate="visible"
     >
       {letters.map((letter, index) => (
-        <motion.span variants={child} key={index}>
+        <motion.span variants={child} key={index}
+        className="overflow-hidden flex-wrap-reverse"
+        >
           {letter === " " ? "\u00A0" : letter}
         </motion.span>
       ))}

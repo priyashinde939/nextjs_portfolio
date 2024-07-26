@@ -29,7 +29,9 @@ const config = {
     },
     extend: {
       backgroundImage: {
-        'bgImg': "url('../public/herobg.webp')" 
+        'bgImg': "url('../public/herobg.webp')" ,
+        'bgMask': "url('../public/b.png')",
+        'grid1': "url('../public/grid1.png')"
       },
       fontFamily:{
         'regular': "url('../fonts/BasementGrotesque-Regular.woff2')",
