@@ -30,7 +30,7 @@ const AnimatedTextCharacter: React.FC<AnimatedTextCharacterProps> = ({ text }) =
     },
     hidden: {
       opacity: 0,
-      y: -20,
+      y: 50,
 
 
       transition: {
@@ -49,7 +49,7 @@ const AnimatedTextCharacter: React.FC<AnimatedTextCharacterProps> = ({ text }) =
     >
       {letters.map((letter, index) => (
         <motion.span variants={child} key={index}
-        className="overflow-hidden flex-wrap-reverse"
+        className="overflow-hidden relative"
         >
           {letter === " " ? "\u00A0" : letter}
         </motion.span>
