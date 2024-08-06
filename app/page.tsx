@@ -11,6 +11,8 @@ import Marquee from "@/components/marquee/Marquee";
 
 
 
+
+
 const Home = () => {
 
 
@@ -19,7 +21,7 @@ const Home = () => {
     <main className="relative bg-black-400 flex justify-center items-center overflow-clip flex-col mx-auto ">
       
         <div className="w-full">
-              <Hero />
+          <Hero />
               <Sticky />
               <Marquee />
               <LabIntro />

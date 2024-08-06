@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
+
 import "./globals.css";
 import { ThemeProvider } from "./provider";
 
@@ -28,7 +29,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+            {children}
         </ThemeProvider>
       </body>
     </html>

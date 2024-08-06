@@ -5,7 +5,11 @@ import Pic1 from '../../public/confetti.gif';
 import Pic2 from '../../public/4.jpg';
 import { backInOut, useScroll, useTransform, motion, MotionValue } from 'framer-motion';
 
+
+
 const Sticky: React.FC = () => {
+
+
     const container = useRef<HTMLDivElement | null>(null);
 
     const { scrollYProgress } = useScroll({
