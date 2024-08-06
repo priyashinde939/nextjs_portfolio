@@ -1,6 +1,4 @@
 import React from 'react';
-import AnimatedTextWord from './test/AnimatedTextWord';
-import AnimatedTextCharacter from './test/AnimatedTextCharacter';
 import dynamic from 'next/dynamic';
 const Scene = dynamic(()=> import('@/components/Scene'), {ssr:false});
 
@@ -16,11 +14,11 @@ const Hero = () => {
 					</div>
 				<div>
 					<h1 className="font-extrabold md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px] ">
-						<AnimatedTextCharacter text="Hey, I&apos;m Priya"/>
+						Hey, I&apos;m Priya
 					</h1>
 					<div className="text-[#dfd9ff] font-medium lg:text-[30px] sm:text-[26px] xs:text-[20px] text-[16px] lg:leading-[40px] ">
-						<AnimatedTextCharacter text="A Creative FrontEnd Web Developer&nbsp;"/>
-						<AnimatedTextCharacter text="& UI/UX Designer"/>
+						<div>A Creative FrontEnd Web Developer&nbsp;</div>
+						<div>& UI/UX Designer</div>
 					</div>
 				</div>
 			</div>
