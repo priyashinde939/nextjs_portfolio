@@ -64,7 +64,7 @@ const Section2: React.FC<SectionProps> = ({ scrollYProgress }) => {
         >
         <div className="relative flex flex-col gap-5">
             <p>Hello Helloo</p>
-            <div className="rounded-full w-[24vw] h-[10vh] bg-gradient-to-r from-[#71ff1f] to-transparent"></div>
+            <div className="rounded-full w-[24vw] h-[10vh] bg-gradient-to-r from-[#ff661a] to-transparent"></div>
         </div>
         </motion.div>
     );
