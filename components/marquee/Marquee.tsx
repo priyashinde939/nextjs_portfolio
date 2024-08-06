@@ -14,6 +14,7 @@ export default function Marquee() {
     offset: ['start end', 'end start']
   })
 
+
   return (
     <main className="overflow-hidden">
       <div className='h-[10vh]'/>
