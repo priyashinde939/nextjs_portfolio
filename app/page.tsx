@@ -1,10 +1,6 @@
-"use client";
 
-import ProductGrid3D from "@/components/ProductGrid3D";
 import Footer from "@/components/Footer";
-import Grid from "@/components/Grid";
 import { LabIntro } from '@/components/lab-cylinder/LabIntro';
-import { Test } from "@/components/test/Test";
 import Hero from "@/components/Hero";
 import Sticky from "@/components/sticky-section/StickySection";
 import React from 'react';
@@ -27,9 +23,6 @@ const Home = () => {
               <Sticky />
               <Marquee />
               <LabIntro />
-              <Grid />
-              <Test />
-              <ProductGrid3D />
               <Footer />
         </div>
     
