@@ -53,6 +53,7 @@ const Section1: React.FC<SectionProps> = ({ scrollYProgress }) => {
         </button>
         </motion.div>
     );
+    
 };
 
 const Section2: React.FC<SectionProps> = ({ scrollYProgress }) => {
