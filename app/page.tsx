@@ -27,12 +27,10 @@ const Home = () => {
         <div className="w-full">
           <Hero />
               <Sticky />
-              
               <LabIntro />
               <Frame />
               <Marquee />
               <Sec />
-
               <Footer />
         </div>
     
