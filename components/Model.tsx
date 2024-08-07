@@ -3,13 +3,13 @@ import { useEffect ,useRef } from 'react';
 import { Group } from 'three';
 import { useFrame } from '@react-three/fiber';
 
-useGLTF.preload('./robot_playground.glb');
+useGLTF.preload('./robo.glb');
 
 
 
 export default function Model() {
     const group = useRef<Group>(null);
-    const {animations, scene} = useGLTF('./robot_playground18.glb');
+    const {animations, scene} = useGLTF('./robo.glb');
     const { actions } = useAnimations(animations, scene);
     const scroll = useScroll();
 
