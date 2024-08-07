@@ -33,7 +33,7 @@ interface SectionProps {
 
 const Section1: React.FC<SectionProps> = ({ scrollYProgress }) => {
     const scale = useTransform(scrollYProgress, [0, 1], [1, 0.8]);
-    const rotate = useTransform(scrollYProgress, [0, 1], [0, -5]);
+    const rotate = useTransform(scrollYProgress, [0, 1], [0, 6]);
 
     return (
         <motion.div
@@ -58,7 +58,7 @@ const Section1: React.FC<SectionProps> = ({ scrollYProgress }) => {
 
 const Section2: React.FC<SectionProps> = ({ scrollYProgress }) => {
     const scale = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
-    const rotate = useTransform(scrollYProgress, [0, 1], [-5, 0]);
+    const rotate = useTransform(scrollYProgress, [0, 1], [-6, 0]);
 
     return (
         <motion.div
