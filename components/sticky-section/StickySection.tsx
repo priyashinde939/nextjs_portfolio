@@ -62,11 +62,11 @@ const Section2: React.FC<SectionProps> = ({ scrollYProgress }) => {
     return (
         <motion.div
         style={{ fontFamily: 'black', scale, rotate }}
-        className="relative h-screen bg-purple-300 flex flex-col text-6xl items-center justify-center text-black pb-[10vh]"
+        className="relative h-screen bg-black flex flex-col text-6xl items-center justify-center text-white pb-[10vh]"
         >
         <div className="relative flex flex-col gap-5">
-            <p>Hello Helloo</p>
-            <div className="rounded-full w-[24vw] h-[10vh] bg-gradient-to-r from-[#ffffff] to-transparent"></div>
+            <p>Image Container</p>
+            <div className="rounded-full w-[24vw] h-[10vh] bg-gradient-to-r from-[#e71e1e] to-transparent"></div>
         </div>
         </motion.div>
     );
