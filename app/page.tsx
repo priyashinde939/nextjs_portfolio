@@ -6,7 +6,8 @@ import Sticky from "@/components/sticky-section/StickySection";
 import React from 'react';
 import Marquee from "@/components/marquee/Marquee";
 import { Frame } from "@/components/Frame/Frame";
-import Next from "@/components/next/next";
+import  { Sec } from "@/components/next/Next";
+
 
 
 
@@ -30,7 +31,7 @@ const Home = () => {
               <LabIntro />
               <Frame />
               <Marquee />
-              <Next />
+              <Sec />
 
               <Footer />
         </div>

@@ -1,9 +1,7 @@
 import React from 'react'
 
-export default function Next () {
+export const Sec = () => {
     return (
-        <div className="bg-black h-[100vh]">
-            
-        </div>
+        <div className=" bg-black-100 h-[100vh]">Next</div>
     )
 }
