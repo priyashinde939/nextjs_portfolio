@@ -3,6 +3,7 @@ import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Pic1 from '../../public/confetti.gif';
 import { useScroll, useTransform, motion, MotionValue } from 'framer-motion';
+import SmoothScrolling from '../smoothScroll/SmoothScroll';
 
 
 
@@ -20,10 +21,13 @@ const Sticky: React.FC = () => {
 
 
     return (
-        <div ref={container} className="relative h-[200vh]">
-        <Section1 scrollYProgress={scrollYProgress} />
-        <Section2 scrollYProgress={scrollYProgress} />
-        </div>
+            <div ref={container} className="relative h-[200vh] bg-gray-900">
+            <SmoothScrolling>
+                <Section1 scrollYProgress={scrollYProgress} />
+                <Section2 scrollYProgress={scrollYProgress} />
+            </SmoothScrolling>
+            </div>
+        
     );
 };
 
@@ -37,8 +41,10 @@ const Section1: React.FC<SectionProps> = ({ scrollYProgress }) => {
 
     return (
         <motion.div
+        transition={{ type: "spring", stiffness: 10 }}
         style={{ fontFamily: 'blackExpanded', scale, rotate }}
         className="sticky top-0 h-screen bg-lime-400 text-[3.5vw] text-black flex flex-col items-center justify-center pb-[10vh]"
+        
         >
         <p>Heading Heading</p>
         <div className="flex gap-5">
@@ -62,12 +68,13 @@ const Section2: React.FC<SectionProps> = ({ scrollYProgress }) => {
 
     return (
         <motion.div
+        transition={{ type: "spring", stiffness: 10 }}
         style={{ fontFamily: 'black', scale, rotate }}
         className="relative h-screen bg-black flex flex-col text-6xl items-center justify-center text-white pb-[10vh]"
         >
         <div className="relative flex flex-col gap-5">
             <p>Image Container</p>
-            <div className="rounded-full w-[24vw] h-[10vh] bg-gradient-to-r from-[#e71e1e] to-transparent"></div>
+            <div className="rounded-full w-[24vw] h-[10vh] bg-gradient-to-r from-[#de462b] to-transparent"></div>
         </div>
         </motion.div>
     );

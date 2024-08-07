@@ -16,7 +16,7 @@ export const Frame: React.FC = () => {
     const rotate = useTransform(scrollYProgress, [0, 1], [0, -20]);
 
     return (
-        <section ref={container} className="relative h-[350vh] bg-white">
+        <section ref={container} className="relative h-[300vh] bg-white">
         <div className="sticky top-0 h-[100vh] bg-black">
             <div className="w-full h-full absolute top-0 flex items-center justify-center overflow-hidden">
             <motion.div style={{ scale, rotate }} className="w-[25vw] h-[25vw] relative">
