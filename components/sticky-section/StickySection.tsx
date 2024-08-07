@@ -3,7 +3,7 @@ import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Pic1 from '../../public/confetti.gif';
 import { useScroll, useTransform, motion, MotionValue } from 'framer-motion';
-import SmoothScrolling from '../smoothScroll/SmoothScroll';
+
 
 
 
@@ -22,10 +22,8 @@ const Sticky: React.FC = () => {
 
     return (
             <div ref={container} className="relative h-[200vh] bg-gray-900">
-            <SmoothScrolling>
                 <Section1 scrollYProgress={scrollYProgress} />
                 <Section2 scrollYProgress={scrollYProgress} />
-            </SmoothScrolling>
             </div>
         
     );
