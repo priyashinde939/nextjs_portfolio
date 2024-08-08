@@ -21,7 +21,7 @@ const Sticky: React.FC = () => {
 
 
     return (
-            <div ref={container} className="relative h-[200vh] bg-gray-900">
+            <div ref={container} className="relative h-[200vh] bg-black">
                 <Section1 scrollYProgress={scrollYProgress} />
                 <Section2 scrollYProgress={scrollYProgress} />
             </div>
@@ -35,7 +35,7 @@ interface SectionProps {
 
 const Section1: React.FC<SectionProps> = ({ scrollYProgress }) => {
     const scale = useTransform(scrollYProgress, [0, 1], [1, 0.8]);
-    const rotate = useTransform(scrollYProgress, [0, 1], [0, 6]);
+    const rotate = useTransform(scrollYProgress, [0, 1], [0, -6]);
 
     return (
         <motion.div
@@ -52,6 +52,8 @@ const Section1: React.FC<SectionProps> = ({ scrollYProgress }) => {
             </div>
             <p>Transition</p>
         </div>
+        <h1 style={{fontFamily:"black"}}
+                className=" mt-3 font-bold text-2xl text-black"> SED CONDIMENTUM MUS AUGUE LUCTUS .</h1>
         <button className="w-[200px] h-[60px] rounded-full text-lg bg-purple-300 m-6">
             Click
         </button>
@@ -62,7 +64,7 @@ const Section1: React.FC<SectionProps> = ({ scrollYProgress }) => {
 
 const Section2: React.FC<SectionProps> = ({ scrollYProgress }) => {
     const scale = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
-    const rotate = useTransform(scrollYProgress, [0, 1], [-6, 0]);
+    const rotate = useTransform(scrollYProgress, [0, 1], [6, 0]);
 
     return (
         <motion.div
@@ -72,7 +74,8 @@ const Section2: React.FC<SectionProps> = ({ scrollYProgress }) => {
         >
         <div className="relative flex flex-col gap-5">
             <p>Image Container</p>
-            <div className="rounded-full w-[24vw] h-[10vh] bg-gradient-to-r from-[#de462b] to-transparent"></div>
+            <h1 style={{fontFamily:"black"}}
+                className=" mt-3 font-bold text-2xl text-gray-400"> SED CONDIMENTUM MUS AUGUE LUCTUS .</h1>
         </div>
         </motion.div>
     );
