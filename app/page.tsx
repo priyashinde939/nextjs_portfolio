@@ -6,7 +6,7 @@ import Sticky from "@/components/sticky-section/StickySection";
 import Marquee from "@/components/marquee/Marquee";
 import { Frame } from "@/components/Frame/Frame";
 import { Sec } from "@/components/next/Next";
-import { Section } from "@/components/next/Next2";
+
 
 
 const Home = () => {
@@ -21,7 +21,6 @@ const Home = () => {
         <Frame />
         <Marquee />
         <Sec />
-        <Section />
         <Footer />
       </div>
     </main>

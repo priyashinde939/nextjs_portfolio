@@ -14,18 +14,19 @@ export const Section = () => {
                     className=" mt-3 font-bold text-sm text-gray-400"> SED CONDIMENTUM MUS AUGUE LUCTUS .</h1>
                 </div>
 
-                <div style={{fontFamily:"regular"}}
+                <div style={{fontFamily:"Bella"}}
                 className="relative mt-6 text-7xl h-[50vh] bg-black-200 ">
-                    <h1  className="relative left-44 m-3 ">
+                    <h1  className="relative left-44 mb-5 ">
                         MINIMALISTIC
                     </h1>
-                    <h1 className="relative left-56 m-3 text-red-600">
+                    <h1 className="relative left-44 m-5 text-red-600">
                         AND
                     </h1>
-                    <h1 className="relative left-9 m-3 ">
+                    <h1 className="relative left-9 m-5 ">
                         CREATIVE DESIGNNN
                     </h1>
-                    <h1 className="relative left-60 mt-3 text-white-300 bg-neutral-600 px-6 w-[500px] rounded-sm ">
+                    <h1 style={{fontFamily:"Sugar"}}
+                    className="relative left-60 mt-7 text-8xl text-white-300 bg-neutral-600 px-6 w-[400px] rounded-sm ">
                         ARTWORKS
                     </h1>
                     <div className='relative left-5 -top-8 '>
