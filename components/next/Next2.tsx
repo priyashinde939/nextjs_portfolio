@@ -1,6 +1,9 @@
+'use client'
 import React from 'react';
 import Image from 'next/image';
-import RotatingText from '../../public/RotatingText.svg'
+import RotatingText from '../../public/RotatingText.svg';
+import CurvedText from '../ui/CurvedText';
+
 
 export const Section = () => {
     return (
@@ -12,6 +15,7 @@ export const Section = () => {
                     Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor laudantium, totam rem aperiam, ipsa quae abeaque ipsa quae ab illo ipsa quae abeaqueinventore veritatis 
                     <h1 style={{fontFamily:"black"}}
                     className=" mt-3 font-bold text-sm text-gray-400"> SED CONDIMENTUM MUS AUGUE LUCTUS .</h1>
+                    
                 </div>
 
                 <div style={{fontFamily:"Bella"}}
@@ -29,16 +33,12 @@ export const Section = () => {
                     <h1 style={{fontFamily:"Sugar"}}
                     className="relative left-72 mt-9 text-8xl text-white-300 bg-neutral-600 px-6 w-[400px] rounded-sm ">
                         ARTWORKS
-                    </h1>
-                    <div className='relative left-5 -top-24 '>
-                        <Image
-                        priority
-                        src={RotatingText}
-                        alt="text"
-                        />
-                    </div> 
-                </div>
+                    </h1> 
 
+                </div>
+                <div className='absolute bottom-52 -left-20  '>
+                        <CurvedText />
+                </div>
             </div>
             
 

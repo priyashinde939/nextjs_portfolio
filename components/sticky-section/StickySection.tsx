@@ -3,6 +3,7 @@ import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Pic1 from '../../public/confetti.gif';
 import { useScroll, useTransform, motion, MotionValue } from 'framer-motion';
+import CurvedText from '../ui/CurvedText';
 
 
 
@@ -41,7 +42,7 @@ const Section1: React.FC<SectionProps> = ({ scrollYProgress }) => {
         <motion.div
         transition={{ type: "spring", stiffness: 10 }}
         style={{ fontFamily: 'blackExpanded', scale, rotate }}
-        className="sticky top-0 h-screen bg-lime-400 text-[3.5vw] text-black flex flex-col items-center justify-center pb-[10vh]"
+        className="sticky top-0 h-screen bg-lime-500 text-[3.5vw] text-black flex flex-col items-center justify-center pb-[10vh]"
         
         >
         <p>Heading Heading</p>
@@ -72,7 +73,7 @@ const Section2: React.FC<SectionProps> = ({ scrollYProgress }) => {
         style={{ fontFamily: 'black', scale, rotate }}
         className="relative h-screen bg-black flex flex-col text-6xl items-center justify-center text-white pb-[10vh]"
         >
-        <div className="relative flex flex-col gap-5">
+        <div className="relative flex flex-col gap-5 ">
             <p>Image Container</p>
             <h1 style={{fontFamily:"black"}}
                 className=" mt-3 font-bold text-2xl text-gray-400"> SED CONDIMENTUM MUS AUGUE LUCTUS .</h1>

@@ -83,6 +83,17 @@
     @apply font-bold text-4xl md:text-5xl text-center;
   }
 }
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.spinSlow {
+  animation: spinSlow 20s linear infinite ;
+}
 
 
 

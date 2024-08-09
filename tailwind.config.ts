@@ -180,9 +180,16 @@ const config = {
         },
         
       },
+      spinner: {
+          "0%": { transform: "rotate(360deg)" },
+          "100%": { transform: "rotate(0deg)" },
+        },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        rotater: "rotater 20s linear infinite", 
+        spinSlow:"spinSlow 20s linear infinite",
+        wiggle: "wiggle 10s linear infinite",
         spotlight: "spotlight 2s ease .75s 1 forwards",
         shimmer: "shimmer 2s linear infinite",
         first: "moveVertical 30s ease infinite",
