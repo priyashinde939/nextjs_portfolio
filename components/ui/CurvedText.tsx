@@ -2,6 +2,7 @@ import React from 'react'
 import ReactCurvedText from 'react-curved-text';
 
 
+
 const CurvedText = () => {
     return (
         <ReactCurvedText width={300}
