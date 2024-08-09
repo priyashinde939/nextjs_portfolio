@@ -21,6 +21,7 @@ export const Section = () => {
                     </h1>
                     <h1 className="relative left-44 m-5 text-red-600">
                         AND
+    
                     </h1>
                     <h1 className="relative left-9 m-5 ">
                         CREATIVE DESIGNNN
