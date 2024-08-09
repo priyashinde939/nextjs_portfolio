@@ -29,7 +29,7 @@ export const Section = () => {
                     className="relative left-60 mt-7 text-8xl text-white-300 bg-neutral-600 px-6 w-[400px] rounded-sm ">
                         ARTWORKS
                     </h1>
-                    <div className='relative left-5 -top-8 '>
+                    <div className='relative left-5 -top-24 '>
                         <Image
                         priority
                         src={RotatingText}
