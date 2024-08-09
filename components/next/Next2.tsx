@@ -15,7 +15,7 @@ export const Section = () => {
                 </div>
 
                 <div style={{fontFamily:"Bella"}}
-                className="relative mt-6 text-7xl h-[50vh] bg-black-200 ">
+                className="relative mt-6 text-7xl h-[50vh]  ">
                     <h1  className="relative left-44 mb-5 ">
                         MINIMALISTIC
                     </h1>
@@ -26,7 +26,7 @@ export const Section = () => {
                         CREATIVE DESIGNNN
                     </h1>
                     <h1 style={{fontFamily:"Sugar"}}
-                    className="relative left-60 mt-7 text-8xl text-white-300 bg-neutral-600 px-6 w-[400px] rounded-sm ">
+                    className="relative left-72 mt-9 text-8xl text-white-300 bg-neutral-600 px-6 w-[400px] rounded-sm ">
                         ARTWORKS
                     </h1>
                     <div className='relative left-5 -top-24 '>
