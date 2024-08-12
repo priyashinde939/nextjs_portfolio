@@ -22,7 +22,7 @@ const Sticky: React.FC = () => {
 
 
     return (
-            <div ref={container} className="relative h-[210vh] bg-black my-40 ">
+            <div ref={container} className="relative h-[210vh] bg-black my-40 scroll-smooth">
                 <Section1 scrollYProgress={scrollYProgress} />
                 <Section2 scrollYProgress={scrollYProgress} />
             </div>
@@ -88,7 +88,7 @@ const Section2: React.FC<SectionProps> = ({ scrollYProgress }) => {
 
         
             <div className="relative -left-[20%] top-[90%] mr-10 h-full w-[60vw] flex flex-col gap-10 text-white-200 text-3xl">
-                
+
                 <div className="relative w-[600px] h-fit ">
                     <h1>Sed ut perspiciatis unde omnis iste natus</h1>
                     <div className="w-full h-[1px] my-8 bg-gray-700"></div>
