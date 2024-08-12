@@ -23,8 +23,9 @@ const Home = () => {
         <Frame />
         <Marquee />
         <Sticky />
-        <LabIntroc />
+        
         <Sec />
+        <LabIntroc />
         <Last />
         <Footer />
       </div>
