@@ -1,8 +1,8 @@
 import React from 'react'
 
-export const Sec = () => {
+export const Last = () => {
     return (
-        <div className=" bg-black h-[100vh]">
+        <div className='h-screen bg-black'>
             
         </div>
     )

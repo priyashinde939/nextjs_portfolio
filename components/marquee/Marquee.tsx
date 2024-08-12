@@ -1,5 +1,5 @@
 'use client'
-import { useScroll, useTransform, motion } from 'framer-motion';
+import { useScroll, useTransform, motion, useSpring } from 'framer-motion';
 import Image from 'next/image';
 import { useRef } from 'react';
 import Picture1 from '../../public/git.svg';
@@ -37,7 +37,11 @@ export default function Marquee() {
 
 const Slide: React.FC<SlideProps> = ({ src, direction, left, progress }) => {
   const directionFactor = direction === 'left' ? -1 : 1;
-  const translateX = useTransform(progress, [0, 1], [150 * directionFactor, -150 * directionFactor]);
+const translateX = useSpring(
+  useTransform(progress, [0, 1], [300 * directionFactor, -300 * directionFactor]), 
+  { stiffness: 100, damping: 20 }
+);
+
 
   return (
     <motion.div style={{ x: translateX, left }} className="relative flex whitespace-nowrap">

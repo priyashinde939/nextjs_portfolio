@@ -55,10 +55,9 @@ export const LabIntro = () => {
           }}
         >
           <h2 
-          style={{ fontFamily:'blackExtraExpanded'}}
           className={s.title}>A peek into My Skillset</h2>
         </Scrollytelling.Parallax>
-        <p style={{fontFamily:'regular'}}
+        <p
         className={s.subtitle}>
           <svg
             width="9"
@@ -130,7 +129,7 @@ const Marquee = ({
         data-marquee-animation-container
       >
         {Array.from({ length: 10 }, (_, i) => (
-          <div style={{fontFamily:'blackExtraExpanded'}} key={i} className={s.marqueeItem}>
+          <div key={i} className={s.marqueeItem}>
             Skills <LabSvg />
           </div>
         ))}

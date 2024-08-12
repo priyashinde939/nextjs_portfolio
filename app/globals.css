@@ -78,11 +78,11 @@
   }
 }
 
-@layer utilities {
+/* @layer utilities {
   .heading {
     @apply font-bold text-4xl md:text-5xl text-center;
   }
-}
+} */
 @keyframes spinSlow {
   from {
     transform: rotate(0deg);
@@ -98,7 +98,7 @@
 
 
 
-@font-face {
+/* @font-face {
   font-family: 'regular' ;
   src: url(../fonts/BasementGrotesque-Regular.woff2);
   font-style: normal;
@@ -119,8 +119,8 @@
   font-family: 'blackExtraExpanded' ;
   src: url(../fonts/BasementGrotesqueDisplay-UltraBlackExtraExpanded.woff2);
   font-style: normal;
-}
-@font-face {
+} */
+/* @font-face {
   font-family: 'Fountain' ;
   src: url(../fonts/Fountain.ttf);
   font-style: normal;
@@ -134,13 +134,13 @@
   font-family: 'Gravis';
   src: url(../fonts/Gravis.ttf);
   font-style: normal;
-}
+} */
 @font-face {
   font-family: 'Sugar';
   src: url(../fonts/Sugar.otf);
   font-style: normal;
 }
-@font-face {
+/* @font-face {
   font-family: 'Vovchik';
   src: url(../fonts/Vovchik.otf);
   font-style: normal;
@@ -154,7 +154,7 @@
   font-family: 'Abang';
   src: url(../fonts/Abang.otf);
   font-style: normal;
-}
+} */
 @font-face {
   font-family: 'Bella';
   src: url(../fonts/Bella.ttf);

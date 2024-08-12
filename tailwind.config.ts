@@ -28,17 +28,15 @@ const config = {
       },
     },
     extend: {
-      backgroundImage: {
-        'bgImg': "url('../public/herobg.webp')" ,
-        'bgMask': "url('../public/b.png')",
-        'grid1': "url('../public/grid1.png')"
-      },
-      fontFamily:{
-        'regular': "url('../fonts/BasementGrotesque-Regular.woff2')",
-        'black': "url('../fonts/BasementGrotesque-Black.woff2')",
-        'blackExpanded': "url('../fonts/BasementGrotesque-BlackExpanded.woff2')",
-        'blackExtraExpanded': "url('../fonts/BasementGrotesqueDisplay-UltraBlackExtraExpanded.woff2')",
-      },
+      // backgroundImage: {
+      //   'bgImg': "url('../public/herobg.webp')" ,
+      //   'bgMask': "url('../public/b.png')",
+      //   'grid1': "url('../public/grid1.png')"
+      // },
+      // fontFamily:{
+      //   'regular': "url('../fonts/BasementGrotesque-Regular.woff2')",
+
+      // },
       colors: {
         black: {
           DEFAULT: "#000",

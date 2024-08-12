@@ -1,7 +1,7 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
-import { Section } from './next/Next2';
-const Scene = dynamic(()=> import('@/components/Scene'), {ssr:false});
+import { Section } from './homeContent';
+const Scene = dynamic(()=> import('@/components/Home/Scene'), {ssr:false});
 
 
 const Hero = () => {

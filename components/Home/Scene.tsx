@@ -1,9 +1,9 @@
 'use client';
-import { Canvas, useThree } from '@react-three/fiber';
+import { Canvas } from '@react-three/fiber';
 import { Suspense } from 'react';
 import Model from './Model';
 import { ScrollControls} from '@react-three/drei/';
-import CanvasLoader from './ui/CanvasLoader';
+import CanvasLoader from '../ui/CanvasLoader';
 
 
 
