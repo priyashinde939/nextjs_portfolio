@@ -64,7 +64,7 @@ const Marquee = ({
       >
         {Array.from({ length: 10 }, (_, i) => (
           <div key={i} className={s.marqueeItem}>
-            AUGUE <LabSvg />
+            SKILLS <LabSvg />
           </div>
         ))}
       </div>
