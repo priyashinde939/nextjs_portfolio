@@ -3,6 +3,7 @@ import { useRef } from 'react';
 import { useScroll, useTransform, motion, MotionValue } from 'framer-motion';
 import Image from 'next/image';
 import pic from '../../public/5.jpg'
+import { ScrollParallax } from 'react-just-parallax';
 
 
 
@@ -39,14 +40,18 @@ const Section1: React.FC<SectionProps> = ({ scrollYProgress }) => {
     const rotate = useTransform(scrollYProgress, [0, 1], [0, 0]);
 
     return (
+                
         <motion.div
-        transition={{ type: "spring", stiffness: 1 }}
+        transition={{ type: "", stiffness: 1 }}
         style={{ fontFamily: 'blackExpanded', scale, rotate }}
-        className="sticky top-0 h-screen bg-black text-[3.5vw] py-[10vh] pl-2"
+        className=" sticky top-0 h-screen bg-black text-[3.5vw] py-[10vh] pl-2"
         
         >
-        <Image src={pic} alt='svg' height={500}/>
+            <ScrollParallax>
+                <Image src={pic} alt='svg' height={500}/>
+            </ScrollParallax>
         </motion.div>
+
     );
     
 };
@@ -61,6 +66,7 @@ const Section2: React.FC<SectionProps> = ({ scrollYProgress }) => {
         style={{ scale, rotate }}
         className="absolute top-0 h-[110vh] width-full flex flex-auto pt-[10vh]"
         >
+
             <div className=" relative left-[28%] top-14 m-0 h-auto w-[600px] text-xl text-start p-3  ">
                     <h1 
                     className="relative mt-3 font-bold  text-red-700"> 
