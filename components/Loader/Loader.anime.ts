@@ -21,11 +21,6 @@ export const useLoaderAnime = () => {
         })
         .from('Image', {
           opacity: 1,
-          duration: 0.75,
-          scale: 0.001,
-          rotate: 10,
-          yPercent: matchMedia('(max-width: 1024px)').matches ? 50 : 100,
-          ease: 'power1.inOut',
         })
         // Loader FadeOut Animation
         .to(

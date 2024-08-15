@@ -47,9 +47,9 @@ const Section1: React.FC<SectionProps> = ({ scrollYProgress }) => {
         className=" sticky top-0 h-screen bg-black text-[3.5vw] py-[10vh] pl-2"
         
         >
-            <ScrollParallax>
+
                 <Image src={pic} alt='svg' height={500}/>
-            </ScrollParallax>
+
         </motion.div>
 
     );
@@ -69,7 +69,7 @@ const Section2: React.FC<SectionProps> = ({ scrollYProgress }) => {
 
             <div className=" relative left-[28%] top-14 m-0 h-auto w-[600px] text-xl text-start p-3  ">
                     <h1 
-                    className="relative mt-3 font-bold  text-red-700"> 
+                    className="relative mt-3 font-bold text-gray-400"> 
                     SED CONDIMENTUM MUS AUGUE LUCTUS .
                     </h1>
                     <div 
