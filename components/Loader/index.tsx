@@ -9,6 +9,7 @@ const Loader = memo(function Loader() {
 
   if (hideLoader) return;
 
+  
   return (
     <section ref={ref} className={styles.loader}>
       <div className='bg-gray-700 h-full'>
