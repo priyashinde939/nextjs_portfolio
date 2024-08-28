@@ -9,7 +9,7 @@ export default function Model() {
   const { scene } = useGLTF('./planet5.glb');
 
   return (
-    <group position={[0.2, -0.5, -0.9]} scale={[6, 6, 6]} ref={group}>
+    <group position={[0.5, 2, 1]} scale={[5, 5, 5]} ref={group}>
       <primitive object={scene} />
     </group>
   );

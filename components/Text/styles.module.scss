@@ -1,0 +1,68 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    padding: 6rem;
+    min-height: 100vh;
+}
+
+/* Sandbox CSS */
+
+/* .title {
+position: relative;
+white-space: nowrap;
+}
+
+.heroTitleUper {
+display: inline-flex;
+}
+
+.heroTitleLoopWrapper {
+position: relative;
+display: inline-flex;
+}
+
+.overMask {
+overflow: hidden;
+position: relative;
+} */
+
+/* My CSS */
+
+.title {
+position: relative;
+white-space: nowrap;
+}
+
+.heroTitleUper {
+/*
+Had this instead of inline-flex lol
+
+position: absolute;
+top: -100%;
+left: 0;
+height: 120%;
+width: 100%; */
+display: inline-flex;
+}
+
+.heroTitleLoopWrapper {
+position: relative;
+width: 100%;
+/* overflow: hidden; */
+}
+
+.heroTitleLoopText {
+display: inline-flex;
+/* position: absolute;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%; */
+}
+
+.overMask {
+overflow: hidden;
+position: relative;
+}

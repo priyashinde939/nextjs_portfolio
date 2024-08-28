@@ -12,12 +12,12 @@ import CanvasLoader from '../ui/CanvasLoader';
 export default function Scene() {
   return (
     <section>
-      <div className="relative ">
+      <div className="absolute w-full left-28 "> 
             <Canvas style={{ height: '200vh', width: '100%' }}
             
-            camera={{ position: [0, 0, 8], fov: 60, near: 0.3, far: 1000 }}
-            gl={{antialias:true}} dpr={[2.5, 2]} className="relative mb-5">
-            <OrbitControls enableZoom={false} enablePan={true} autoRotate={true}/>
+            camera={{ position: [2, 1, 8], fov: 70, near: 0.3, far: 1000 }}
+            gl={{antialias:true}} dpr={[1.5, 2]} className="relative mb-5">
+            <OrbitControls enableZoom={false} enablePan={false} autoRotate={true} />
             <directionalLight position={[10, 5, 8]}  intensity={4}/>
             <ambientLight intensity={5} color='white' />
               <Suspense fallback={<CanvasLoader/>}>
