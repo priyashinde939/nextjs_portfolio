@@ -18,7 +18,7 @@ export default function Scene() {
             <directionalLight position={[-5, -5, 8]}  intensity={4}/>
             <ambientLight intensity={2} color='blue' />
               <Suspense fallback={<CanvasLoader/>}>
-                  <ScrollControls damping={0.9} pages={4}>
+                  <ScrollControls damping={0.1} pages={0.5}>
                       <Model />
                   </ScrollControls>
               </Suspense>
