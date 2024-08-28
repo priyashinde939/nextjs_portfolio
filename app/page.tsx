@@ -1,7 +1,7 @@
 import React from 'react';
 import Footer from "@/components/Footer";
 // import Hero from "@/components/Home/Hero";
-// import Sticky from "@/components/sticky-section/StickySection";
+import Sticky from "@/components/sticky-section/StickySection";
 // import Marquee from "@/components/marquee/Marquee";
 // import { Frame } from "@/components/Frame/Frame";
 // import  Sec  from "@/components/test/NextImage";
@@ -25,10 +25,11 @@ const Home = () => {
         <Planet />
         {/* <Frame />
         <Marquee />
-        <Sticky />
+       
         <Sec />
         <LabIntroc />
         */}
+        <Sticky />
         <Last /> 
         <Footer />
       </div>
