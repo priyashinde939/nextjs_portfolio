@@ -17,7 +17,7 @@ export default function Scene() {
             
             camera={{ position: [5, 1, 3], fov: 50, near: 0.1, far: 1000 }}
             gl={{antialias:true}} dpr={[4, 6]} className="relative mb-5">
-            <OrbitControls enableZoom={false} enablePan={false}/>
+            <OrbitControls enableZoom={false} enablePan={true} autoRotate={true}/>
             <directionalLight position={[10, 5, 8]}  intensity={4}/>
             <ambientLight intensity={5} color='white' />
               <Suspense fallback={<CanvasLoader/>}>
