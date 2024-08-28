@@ -5,7 +5,7 @@ const Scene = dynamic(()=> import('@/components/Planet/Scene'), {ssr:false});
 
 const Planet = () => {
     return (
-        <section className="relative h-screen w-full bg-black-100 ">
+        <section className="relative h-[200vh] w-full bg-black-100 ">
             <Scene />
         </section>
     )

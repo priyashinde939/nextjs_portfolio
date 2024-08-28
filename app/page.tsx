@@ -1,11 +1,11 @@
 import React from 'react';
 import Footer from "@/components/Footer";
-import Hero from "@/components/Home/Hero";
-import Sticky from "@/components/sticky-section/StickySection";
-import Marquee from "@/components/marquee/Marquee";
-import { Frame } from "@/components/Frame/Frame";
-import  Sec  from "@/components/test/NextImage";
-import { LabIntroc } from '@/components/lab-cylinder/LabIntroc';
+// import Hero from "@/components/Home/Hero";
+// import Sticky from "@/components/sticky-section/StickySection";
+// import Marquee from "@/components/marquee/Marquee";
+// import { Frame } from "@/components/Frame/Frame";
+// import  Sec  from "@/components/test/NextImage";
+// import { LabIntroc } from '@/components/lab-cylinder/LabIntroc';
 import Loader from '@/components/Loader/index';
 import { Last } from '@/components/last/last';
 import Planet from '@/components/Planet/Planet';
@@ -23,12 +23,13 @@ const Home = () => {
       <div className="w-full">
 
         <Planet />
-        <Frame />
+        {/* <Frame />
         <Marquee />
         <Sticky />
         <Sec />
         <LabIntroc />
-        <Last />
+        */}
+        <Last /> 
         <Footer />
       </div>
     </main>
