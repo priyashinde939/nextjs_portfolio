@@ -1,37 +1,29 @@
-import { useAnimations ,useGLTF, useScroll } from '@react-three/drei/';
-import { useEffect ,useRef } from 'react';
+import { useAnimations, useGLTF } from '@react-three/drei';
+import { useEffect, useRef } from 'react';
 import { Group } from 'three';
 import { useFrame } from '@react-three/fiber';
 
-useGLTF.preload('./planet1.glb');
-
-
+useGLTF.preload('./dragon.glb');
 
 export default function Model() {
     const group = useRef<Group>(null);
-    const {animations, scene} = useGLTF('./planet1.glb');
+    const { animations, scene } = useGLTF('./dragon.glb');
     const { actions } = useAnimations(animations, scene);
-    const scroll = useScroll();
 
+    useEffect(() => {
+        if (actions["Animation"]) {
+            actions["Animation"].play();
+            actions["Animation"].paused = false; // Play animation normally
+        }
+    }, [actions]);
 
-useEffect(() => {
-    console.log(actions)
-    //@ts-ignore
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    actions["Object_0"].play().paused = true}, [])
+    useFrame(() => {
+        // You can add logic here to control animations differently if needed.
+    });
 
-useFrame(
-    () =>
-      //@ts-ignore
-    (actions["Object_0"].time =
-        //@ts-ignore
-        (actions["Object_0"].getClip().duration * scroll.offset) / 1),
-        
-)
-
-    return(
-        <group  position={[0, -0.7, -0.2]} ref={group}>
-            <primitive object={scene}/>
+    return (
+        <group position={[0, -0.7, -0.2]} ref={group}>
+            <primitive object={scene} />
         </group>
-    )
+    );
 }
