@@ -1,29 +1,16 @@
-import { useAnimations, useGLTF } from '@react-three/drei';
-import { useEffect, useRef } from 'react';
+import { useGLTF } from '@react-three/drei';
+import { useRef } from 'react';
 import { Group } from 'three';
-import { useFrame } from '@react-three/fiber';
 
-useGLTF.preload('./dragon.glb');
+useGLTF.preload('./planet5.glb');
 
 export default function Model() {
-    const group = useRef<Group>(null);
-    const { animations, scene } = useGLTF('./dragon.glb');
-    const { actions } = useAnimations(animations, scene);
+  const group = useRef<Group>(null);
+  const { scene } = useGLTF('./planet5.glb');
 
-    useEffect(() => {
-        if (actions["Animation"]) {
-            actions["Animation"].play();
-            actions["Animation"].paused = false; // Play animation normally
-        }
-    }, [actions]);
-
-    useFrame(() => {
-        // You can add logic here to control animations differently if needed.
-    });
-
-    return (
-        <group position={[0, -0.7, -0.2]} ref={group}>
-            <primitive object={scene} />
-        </group>
-    );
+  return (
+    <group position={[0.2, -0.5, -0.9]} scale={[6, 6, 6]} ref={group}>
+      <primitive object={scene} />
+    </group>
+  );
 }

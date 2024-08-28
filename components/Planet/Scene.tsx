@@ -3,6 +3,7 @@ import { Canvas } from '@react-three/fiber';
 import { Suspense } from 'react';
 import Model from './Model';
 import { ScrollControls} from '@react-three/drei/';
+import { OrbitControls} from '@react-three/drei';
 import CanvasLoader from '../ui/CanvasLoader';
 
 
@@ -11,16 +12,16 @@ import CanvasLoader from '../ui/CanvasLoader';
 export default function Scene() {
   return (
     <section>
-      <div className="relative h-screen bg-black-200 ">
+      <div className="relative ">
             <Canvas style={{ height: '100vh', width: '100%' }}
-            camera={{ position: [-0.5, 0.5, 3], fov: 60, far:10, near:1, aspect:2 }}
-            gl={{antialias:true}} dpr={[1, 2]} className="relative mb-5">
-            <directionalLight position={[-5, -5, 8]}  intensity={4}/>
-            <ambientLight intensity={2} color='blue' />
+            
+            camera={{ position: [5, 1, 3], fov: 50, near: 0.1, far: 1000 }}
+            gl={{antialias:true}} dpr={[4, 6]} className="relative mb-5">
+            <OrbitControls enableZoom={false} enablePan={false}/>
+            <directionalLight position={[10, 5, 8]}  intensity={4}/>
+            <ambientLight intensity={5} color='white' />
               <Suspense fallback={<CanvasLoader/>}>
-
                       <Model />
-
               </Suspense>
           </Canvas>
       </div>
