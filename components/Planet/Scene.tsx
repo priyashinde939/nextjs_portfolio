@@ -14,7 +14,7 @@ export default function Scene() {
   return (
     <Canvas
       style={{ height: '100vh', width: '100%' }}
-      camera={{ position: [0, 0, -10], fov: 25c, far: 70}}
+      camera={{ position: [0, 0, -10], fov: 25, far: 70}}
       gl={{ antialias: true }}
       dpr={[1.5, 2]}
     >
