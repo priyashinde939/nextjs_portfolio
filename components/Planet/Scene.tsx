@@ -1,4 +1,4 @@
-'use client';
+'use client'
 import { Canvas, useThree } from '@react-three/fiber';
 import { Suspense } from 'react';
 import Model from './Model';
@@ -12,14 +12,11 @@ function Loader() {
 export default function Scene() {
   return (
     <Canvas
-      style={{ height: '100vh', width: '100%' }}
+      style={{ height: '100vh', width: '100%', position:'absolute' }}
       camera={{ position: [5, -15, 10], fov: 55, far: 50, near: 0.9 }}
       gl={{ antialias: true }}
       dpr={[1, 2]}
     >
-
-  {/* Your scene elements */}
-
       <directionalLight position={[-5, -5, 8]} intensity={1} />
       <ambientLight intensity={0.5} color='white' />
       <Suspense fallback={<Loader />}>
@@ -28,6 +25,5 @@ export default function Scene() {
         </ScrollControls>
       </Suspense>
     </Canvas>
-  
   );
 }
