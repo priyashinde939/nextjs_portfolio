@@ -1,30 +1,32 @@
 'use client';
-import { Canvas } from '@react-three/fiber';
+import { Canvas, useThree } from '@react-three/fiber';
 import { Suspense } from 'react';
 import Model from './Model';
-import { ScrollControls} from '@react-three/drei/';
-import { OrbitControls} from '@react-three/drei';
-import CanvasLoader from '../ui/CanvasLoader';
+import { useProgress, Html, ScrollControls } from '@react-three/drei';
 
-
-
+function Loader() {
+  const { progress } = useProgress();
+  return <Html center>{progress.toFixed(1)}% loaded</Html>;
+}
 
 export default function Scene() {
   return (
-    <section>
-      <div className="absolute w-full left-28 "> 
-            <Canvas style={{ height: '200vh', width: '100%' }}
-            
-            camera={{ position: [1, 1, 8], fov: 70, near: 0.3, far: 1000 }}
-            gl={{antialias:true}} dpr={[1.5, 2]} className="relative mb-5">
-            <OrbitControls enableZoom={false} enablePan={false} autoRotate={true} />
-            <directionalLight position={[10, 5, 8]}  intensity={4}/>
-            <ambientLight intensity={5} color='white' />
-              <Suspense fallback={<CanvasLoader/>}>
-                      <Model />
-              </Suspense>
-          </Canvas>
-      </div>
-    </section>
-  )
+    <Canvas
+      style={{ height: '100vh', width: '100%' }}
+      camera={{ position: [5, -15, 10], fov: 55, far: 50, near: 0.9 }}
+      gl={{ antialias: true }}
+      dpr={[1, 2]}
+    >
+
+  {/* Your scene elements */}
+
+      <directionalLight position={[-5, -5, 8]} intensity={1} />
+      <ambientLight intensity={0.5} color='white' />
+      <Suspense fallback={<Loader />}>
+        <ScrollControls damping={0.9} infinite={true}>
+          <Model />
+        </ScrollControls>
+      </Suspense>
+    </Canvas>
+  );
 }
