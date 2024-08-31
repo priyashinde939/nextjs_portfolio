@@ -14,7 +14,7 @@ export default function Model() {
     if (group.current) {
       // Example: Adjust the y position based on scroll offset
       const scrollY = scroll.offset; // Get the scroll offset
-      const positionY = scrollY * 10; // Example scaling factor, adjust as needed
+      const positionY = scrollY * 10  * -20; // Example scaling factor, adjust as needed
       group.current.position.y = positionY;
     }
   });

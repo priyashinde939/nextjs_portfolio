@@ -20,7 +20,7 @@ export default function Scene() {
       <directionalLight position={[-5, -5, 8]} intensity={1} />
       <ambientLight intensity={0.5} color='white' />
       <Suspense fallback={<Loader />}>
-        <ScrollControls damping={0.9} infinite={true}>
+        <ScrollControls damping={0.9} prepend={true}>
           <Model />
         </ScrollControls>
       </Suspense>
