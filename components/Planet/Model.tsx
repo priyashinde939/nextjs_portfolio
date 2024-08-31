@@ -1,35 +1,27 @@
-import { useAnimations ,useGLTF, useScroll } from '@react-three/drei/';
-import { useAnimation } from 'framer-motion';
-import { useEffect ,useRef } from 'react';
+import { useGLTF, useAnimations } from '@react-three/drei';
+import { useEffect, useRef } from 'react';
 import { Group } from 'three';
-import { useFrame } from '@react-three/fiber';
+import { LoopRepeat } from 'three';
 
-useGLTF.preload('./triangle.glb');
+useGLTF.preload('./hologram.glb');
 
 export default function Model() {
-    const group = useRef<Group>(null);
-    const {nodes, materials, animations, scene} = useGLTF('./triangle.glb');
-    const { actions, clips } = useAnimations(animations, scene);
-    const scroll = useScroll();
+  const group = useRef<Group>(null);
+  const { scene, animations } = useGLTF('./hologram.glb');
+  const { actions } = useAnimations(animations, scene);
 
-useEffect(() => {
-    console.log(actions)
-    //@ts-ignore
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    actions["PortalAction"].play().paused = true}, [])
-
-
-useFrame(
-    () =>
-      //@ts-ignore
-    (actions["PortalAction"].time =
-        //@ts-ignore
-        (actions["PortalAction"].getClip().duration * scroll.offset) / 1),
-        
-)
+  useEffect(() => {
+    const action = actions["Take 001"];
+    if (action) {
+      action.play();
+      action.setLoop(LoopRepeat, Infinity); // Loop indefinitely
+    } else {
+      console.warn('Animation "PortalAction" not found in GLTF model.');
+    }
+  }, [actions]);
 
   return (
-    <group position={[0, -0.7, -0.2]} scale={5} ref={group}>
+    <group position={[0, -1, 0]} scale={7} ref={group}>
       <primitive object={scene} />
     </group>
   );

@@ -1,31 +1,28 @@
 'use client';
-import { Canvas, useThree } from '@react-three/fiber';
+import { Canvas } from '@react-three/fiber';
 import { Suspense } from 'react';
 import Model from './Model';
-import {useProgress, Html, ScrollControls} from '@react-three/drei/';
-
+import { useProgress, Html } from '@react-three/drei';
 
 function Loader() {
-const { progress, active } = useProgress()
-return <Html center> {progress.toFixed(1)} % loaded</Html>
+  const { progress } = useProgress();
+  return <Html center>{progress.toFixed(1)}% loaded</Html>;
 }
-
 
 export default function Scene() {
   return (
     <Canvas
       style={{ height: '100vh', width: '100%' }}
-      camera={{ position: [5, -15, 10], fov: 55, far: 50, near: 0.9 }}
+      camera={{ position: [-10, -5, 12], fov: 10, far: 60}}
       gl={{ antialias: true }}
-      dpr={[1, 2]}
+      dpr={[1.5, 2]}
     >
-      <directionalLight position={[-5, -5, 8]} intensity={1} />
-      <ambientLight intensity={0.5} color='white' />
+      <directionalLight position={[-5, -5, 10]} intensity={2} />
+      <ambientLight intensity={0.9} color='white' />
       <Suspense fallback={<Loader />}>
-        <ScrollControls damping={0.9} pages={5}  >
-          <Model />
-        </ScrollControls>
+        <Model />
       </Suspense>
     </Canvas>
   );
 }
+
