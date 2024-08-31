@@ -7,7 +7,7 @@ const Scene = dynamic(()=> import('@/components/Home/Scene'), {ssr:false});
 const Hero = () => {
     return (
         <section 
-        className="relative h-screen w-full bg-black-100 ">
+        className="a h-screen w-full bg-black-100 ">
 				<Section />	
             <Scene />
         </section>
