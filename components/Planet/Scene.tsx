@@ -14,13 +14,13 @@ export default function Scene() {
   return (
     <Canvas
       style={{ height: '100vh', width: '100%' }}
-      camera={{ position: [0, 0, -10], fov: 25, far: 70}}
+      camera={{ position: [0, 0, -10], fov: 21, far: 70}}
       gl={{ antialias: true }}
       dpr={[1.5, 2]}
     >
       <OrbitControls enableZoom={false} enablePan={false} autoRotate={true} />
-      <directionalLight position={[-5, -5, 10]} intensity={8} />
-      <ambientLight intensity={4} color='pink' />
+      <directionalLight position={[-5, -5, 10]} color='red' intensity={8} />
+      <ambientLight intensity={1} color='pink' />
       <Suspense fallback={<Loader />}>
         <Model />
       </Suspense>
