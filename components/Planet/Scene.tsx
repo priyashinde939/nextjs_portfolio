@@ -19,8 +19,8 @@ export default function Scene() {
       dpr={[1.5, 2]}
     >
       <OrbitControls enableZoom={false} enablePan={false} autoRotate={true} />
-      <directionalLight position={[-5, -5, 10]} intensity={2} />
-      <ambientLight intensity={0.9} color='white' />
+      <directionalLight position={[-5, -5, 10]} intensity={8} />
+      <ambientLight intensity={4} color='pink' />
       <Suspense fallback={<Loader />}>
         <Model />
       </Suspense>
