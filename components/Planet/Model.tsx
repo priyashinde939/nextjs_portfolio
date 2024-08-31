@@ -26,6 +26,7 @@ export default function Model() {
     }
   });
 
+  
   return (
     <group position={[0, -0.7, -0.2]} scale={5} ref={group}>
       <primitive object={scene} />

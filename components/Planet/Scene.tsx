@@ -28,5 +28,6 @@ export default function Scene() {
         </ScrollControls>
       </Suspense>
     </Canvas>
+  
   );
 }
