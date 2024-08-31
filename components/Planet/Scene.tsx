@@ -22,7 +22,7 @@ export default function Scene() {
       <directionalLight position={[-5, -5, 8]} intensity={1} />
       <ambientLight intensity={0.5} color='white' />
       <Suspense fallback={<Loader />}>
-        <ScrollControls damping={0.9} pages={4}  style={{position:'absolute'}}>
+        <ScrollControls damping={0.9} pages={5}  >
           <Model />
         </ScrollControls>
       </Suspense>
