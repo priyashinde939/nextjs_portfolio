@@ -3,6 +3,7 @@ import { useEffect, useRef } from 'react';
 import { Group } from 'three';
 import { LoopRepeat } from 'three';
 
+
 useGLTF.preload('./hologram9.glb');
 
 export default function Model() {
