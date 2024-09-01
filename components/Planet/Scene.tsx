@@ -21,7 +21,7 @@ export default function Scene() {
     >
       <OrbitControls enableZoom={false} enablePan={false} autoRotate={true} />
       <directionalLight position={[-5, -5, 10]} color='red' intensity={8} />
-      <ambientLight intensity={2} color='pink' />
+      <ambientLight intensity={1} color='red' />
       
       <Suspense fallback={<Loader />}>
         {/* <Environment preset="sunset" background={false} /> */}
