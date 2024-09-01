@@ -2,8 +2,9 @@
 import { Canvas } from '@react-three/fiber';
 import { Suspense } from 'react';
 import Model from './Model';
-import { useProgress, Html } from '@react-three/drei';
-import { OrbitControls} from '@react-three/drei';
+import { useProgress, Html, OrbitControls} from '@react-three/drei';
+//import { Environment} from '@react-three/drei';
+// import { EffectComposer, Bloom } from '@react-three/postprocessing';
 
 function Loader() {
   const { progress } = useProgress();
@@ -21,8 +22,19 @@ export default function Scene() {
       <OrbitControls enableZoom={false} enablePan={false} autoRotate={true} />
       <directionalLight position={[-5, -5, 10]} color='red' intensity={8} />
       <ambientLight intensity={1} color='pink' />
+      
       <Suspense fallback={<Loader />}>
+        {/* <Environment preset="park" background={false} /> */}
         <Model />
+                {/* Bloom Effect for Glowing */}
+                {/* <EffectComposer>
+                  <Bloom
+                    luminanceThreshold={2}
+                    luminanceSmoothing={2}
+                    height={300}
+                    intensity={2.5} // Increase intensity for stronger glow
+                  />
+                </EffectComposer> */}
       </Suspense>
     </Canvas>
   );
