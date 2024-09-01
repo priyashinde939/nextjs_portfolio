@@ -1,10 +1,8 @@
 'use client';
 import { Canvas } from '@react-three/fiber';
-import { Suspense } from 'react';
+import { Suspense, useState, useEffect } from 'react';
 import Model from './Model';
-import { useProgress, Html, OrbitControls} from '@react-three/drei';
-// import { Environment} from '@react-three/drei';
-// import { EffectComposer, Bloom } from '@react-three/postprocessing';
+import { useProgress, Html, OrbitControls } from '@react-three/drei';
 
 function Loader() {
   const { progress } = useProgress();
@@ -12,37 +10,56 @@ function Loader() {
 }
 
 export default function Scene() {
+  const [isZoomEnabled, setIsZoomEnabled] = useState(false);
+
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      const canvas = document.querySelector('canvas');
+      if (canvas) {
+        const rect = canvas.getBoundingClientRect();
+        const mouseX = e.clientX - rect.left;
+        const mouseY = e.clientY - rect.top;
+
+
+        const zoomArea = {
+          xMin: rect.width * 0.3, 
+          xMax: rect.width * 0.7, 
+          yMin: rect.height * 0.3, 
+          yMax: rect.height * 0.7, 
+        };
+
+
+        if (
+          mouseX >= zoomArea.xMin &&
+          mouseX <= zoomArea.xMax &&
+          mouseY >= zoomArea.yMin &&
+          mouseY <= zoomArea.yMax
+        ) {
+          setIsZoomEnabled(true);
+        } else {
+          setIsZoomEnabled(false);
+        }
+      }
+    };
+
+    window.addEventListener('mousemove', handleMouseMove);
+    return () => window.removeEventListener('mousemove', handleMouseMove);
+  }, []);
+
   return (
-    //  <Canvas
-    //   style={{ height: '100vh', width: '100%' }}
-    //   camera={{ position: [0, 0, -10], fov: 21, far: 70}}
-    //   gl={{ antialias: true }}
-    //   dpr={[1.5, 2]}
-    // >
     <Canvas
       style={{ height: '100vh', width: '100%' }}
-      camera={{ position: [-10, -5, 10], fov: 15, far: 70}}
+      camera={{ position: [15, 15, 15], fov: 9, far: 70 }}
       gl={{ antialias: true }}
       dpr={[1.5, 2]}
     >
-      <OrbitControls  enableZoom={false} enablePan={false} autoRotate={true} autoRotateSpeed={2}  />
-      <directionalLight position={[-5, -5, 10]} color='red' intensity={7} />
-      <ambientLight intensity={0.9} color='blue' />
-      
+      <OrbitControls enableZoom={isZoomEnabled} enablePan={false} autoRotate={false} />
+      <directionalLight position={[-5, -5, 10]} color="blue" intensity={18} />
+      <ambientLight intensity={1} color="red" />
+
       <Suspense fallback={<Loader />}>
-        {/* <Environment preset="sunset" background={false} /> */}
         <Model />
-                {/* Bloom Effect for Glowing */}
-                {/* <EffectComposer>
-                  <Bloom
-                    luminanceThreshold={2}
-                    luminanceSmoothing={2}
-                    height={300}
-                    intensity={2.5} // Increase intensity for stronger glow
-                  />
-                </EffectComposer> */}
       </Suspense>
     </Canvas>
   );
 }
-
