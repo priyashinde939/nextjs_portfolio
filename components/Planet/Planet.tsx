@@ -6,8 +6,8 @@ const Scene = dynamic(()=> import('@/components/Planet/Scene'), {ssr:false});
 
 const Planet = () => {
     return (
-        <section className="relative h-[130vh] w-full bg-black-100 ">
-            <h1 className="absolute z-10 text-8xl text-white-200 font-black items-center justify-center p-10">
+        <section className="relative h-[130vh] w-full bg-black-100 mix-blend-difference">
+            <h1 className="absolute text-8xl text-white-200 font-black items-center justify-center p-10">
                 SED CONDIMENTUM MUS AUGUE LUCTUS 
             </h1>
         <div 
