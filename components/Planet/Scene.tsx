@@ -13,15 +13,21 @@ function Loader() {
 
 export default function Scene() {
   return (
+    //  <Canvas
+    //   style={{ height: '100vh', width: '100%' }}
+    //   camera={{ position: [0, 0, -10], fov: 21, far: 70}}
+    //   gl={{ antialias: true }}
+    //   dpr={[1.5, 2]}
+    // >
     <Canvas
       style={{ height: '100vh', width: '100%' }}
-      camera={{ position: [0, 0, -10], fov: 21, far: 70}}
+      camera={{ position: [-10, -5, 10], fov: 15, far: 70}}
       gl={{ antialias: true }}
       dpr={[1.5, 2]}
     >
-      <OrbitControls enableZoom={false} enablePan={false} autoRotate={true} />
+      <OrbitControls  enableZoom={false} enablePan={false} autoRotate={true} autoRotateSpeed={2}  />
       <directionalLight position={[-5, -5, 10]} color='red' intensity={7} />
-      <ambientLight intensity={0.9} color='orange' />
+      <ambientLight intensity={0.9} color='blue' />
       
       <Suspense fallback={<Loader />}>
         {/* <Environment preset="sunset" background={false} /> */}
