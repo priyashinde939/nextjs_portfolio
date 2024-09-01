@@ -3,11 +3,11 @@ import { useEffect, useRef } from 'react';
 import { Group } from 'three';
 import { LoopRepeat } from 'three';
 
-useGLTF.preload('./hologram10.glb');
+useGLTF.preload('./hologram9.glb');
 
 export default function Model() {
   const group = useRef<Group>(null);
-  const { scene, animations } = useGLTF('./hologram10.glb');
+  const { scene, animations } = useGLTF('./hologram9.glb');
   const { actions } = useAnimations(animations, scene);
 
   useEffect(() => {
