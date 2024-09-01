@@ -53,7 +53,7 @@ export default function Scene() {
       gl={{ antialias: true }}
       dpr={[1.5, 2]}
     >
-      <OrbitControls enableZoom={isZoomEnabled} enablePan={false} autoRotate={false} />
+      <OrbitControls enableZoom={false} enablePan={false} autoRotate={false} />
       <directionalLight position={[-5, -5, 10]} color="blue" intensity={18} />
       <ambientLight intensity={1} color="red" />
 
