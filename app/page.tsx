@@ -8,7 +8,8 @@ import Sticky from "@/components/sticky-section/StickySection";
 // import { LabIntroc } from '@/components/lab-cylinder/LabIntroc';
 import Loader from '@/components/Loader/index';
 import { Last } from '@/components/last/last';
-import Planet from '@/components/Planet/Planet';
+import Hologram from '@/components/Planet/Planet';
+
 
 
 
@@ -22,10 +23,10 @@ const Home = () => {
       <Loader />
       <div className="w-full">
 
-        <Planet />
+        <Hologram />
         {/* <Frame />
         <Marquee />
-       
+  
         <Sec />
         <LabIntroc />
         */}

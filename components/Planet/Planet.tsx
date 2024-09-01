@@ -1,23 +1,24 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
-import Home from '../Text/Vertical';
-const Scene = dynamic(()=> import('@/components/Planet/Scene'), {ssr:false});
 
+const Scene = dynamic(() => import('@/components/Planet/Scene'), { ssr: false });
 
-const Planet = () => {
+const Hologram = () => {
     return (
-        <section className="relative h-[130vh] w-full bg-black-100 mix-blend-difference">
-            <h1 className="absolute text-8xl text-white-200 font-black items-center justify-center p-10">
-                SED CONDIMENTUM MUS AUGUE LUCTUS 
+        <section className="relative h-screen w-full bg-black mix-blend-difference flex flex-col items-center justify-center">
+            <h1 className="text-4xl sm:text-6xl md:text-8xl text-white font-black text-center p-5 sm:p-10">
+                SED CONDIMENTUM MUS AUGUE LUCTUS
             </h1>
-        <div 
-            className=" absolute pt-60 left-[60vw] m-0 h-auto w-[600px] text-2xl text-start p-10 text-gray-500">
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor laudantium, totam rem aperiam, ipsa quae abeaque ipsa quae ab illo ipsa quae abeaqueinventore veritatis 
+            <div 
+                className="pt-8 sm:pt-20 w-full max-w-[600px] text-lg sm:text-xl text-center p-5 sm:p-10 text-gray-500">
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor laudantium, totam rem aperiam, ipsa quae abeaque ipsa quae ab illo ipsa quae abeaque inventore veritatis.
+            </div>
+            <div className="absolute inset-0">
+                <Scene />
             
-        </div>
-            <Scene />
+            </div>
         </section>
-    )
-}
+    );
+};
 
-export default Planet
+export default Hologram
