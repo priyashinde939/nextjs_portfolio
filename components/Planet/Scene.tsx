@@ -3,7 +3,7 @@ import { Canvas } from '@react-three/fiber';
 import { Suspense } from 'react';
 import Model from './Model';
 import { useProgress, Html, OrbitControls} from '@react-three/drei';
-//import { Environment} from '@react-three/drei';
+// import { Environment} from '@react-three/drei';
 // import { EffectComposer, Bloom } from '@react-three/postprocessing';
 
 function Loader() {
@@ -21,10 +21,10 @@ export default function Scene() {
     >
       <OrbitControls enableZoom={false} enablePan={false} autoRotate={true} />
       <directionalLight position={[-5, -5, 10]} color='red' intensity={8} />
-      <ambientLight intensity={1} color='pink' />
+      <ambientLight intensity={2} color='pink' />
       
       <Suspense fallback={<Loader />}>
-        {/* <Environment preset="park" background={false} /> */}
+        {/* <Environment preset="sunset" background={false} /> */}
         <Model />
                 {/* Bloom Effect for Glowing */}
                 {/* <EffectComposer>
