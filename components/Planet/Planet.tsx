@@ -5,7 +5,7 @@ const Scene = dynamic(() => import('@/components/Planet/Scene'), { ssr: false })
 
 const Hologram = () => {
     return (
-        <section className="relative h-screen w-full bg-black mix-blend-difference flex flex-col items-center justify-center">
+        <section className=" h-screen w-full bg-black mix-blend-difference flex flex-col items-center justify-center">
             <h1 className="text-4xl sm:text-6xl md:text-8xl text-white-300 font-black text-center p-5 sm:p-10">
                 SED CONDIMENTUM MUS AUGUE LUCTUS
             </h1>

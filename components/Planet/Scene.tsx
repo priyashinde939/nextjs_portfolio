@@ -51,7 +51,7 @@ export default function Scene() {
       style={{ height: '100vh', width: '100%' }}
       camera={{ position: [15, 15, 15], fov: 9, far: 70 }}
       gl={{ antialias: true }}
-      dpr={[1.5, 2]}
+      dpr={[1, 1]}
     >
       <OrbitControls enableZoom={false} enablePan={false} autoRotate={false} />
       <directionalLight position={[-5, -5, 10]} color="blue" intensity={18} />

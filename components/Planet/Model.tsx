@@ -8,7 +8,7 @@ useGLTF.preload('./hologram9.glb');
 
 export default function Model() {
   const group = useRef<Group>(null);
-  const { scene, animations } = useGLTF('./hologram9.glb');
+  const { scene, animations } = useGLTF('./hologramx1.glb');
   const { actions } = useAnimations(animations, scene);
 
   useEffect(() => {

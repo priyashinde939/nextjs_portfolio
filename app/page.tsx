@@ -21,6 +21,7 @@ const Home = () => {
   return (
     <main className="relative bg-black-400 flex justify-center items-center overflow-clip flex-col mx-auto">
       <Loader />
+      
       <div className="w-full">
 
         <Hologram />
